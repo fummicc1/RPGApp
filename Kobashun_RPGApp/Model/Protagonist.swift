@@ -12,6 +12,9 @@ class Protagonist: Character {
     
     var hp: Int = 10
     var status: CharacterStatus = .start
+    var isDead: Bool {
+        return hp <= 0 ? true : false
+    }
     
     init() { }
     

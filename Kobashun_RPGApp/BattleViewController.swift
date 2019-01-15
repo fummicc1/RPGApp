@@ -12,6 +12,7 @@ class BattleViewController: UIViewController {
 
     @IBOutlet var protagonistImageView: UIImageView!
     @IBOutlet var protagonistHPLabel: UILabel!
+    @IBOutlet var narrationLabel: UILabel!
     
     @IBOutlet var protagonistCommandButtons: [UIButton]!
     
@@ -21,15 +22,23 @@ class BattleViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tappedAttackButton() {
+        protagonist.attack(kind: CharacterStatus.attack)
+        putNarration(with: "主人公の通常攻撃!")
     }
-    */
-
+    
+    @IBAction func tappedSpecialAttackButton() {
+        protagonist.attack(kind: CharacterStatus.specialAttack)
+        putNarration(with: "主人公は必殺技を発動した！")
+    }
+    
+    @IBAction func tappedDefenceButton() {
+        protagonist.attack(kind: CharacterStatus.defence)
+        putNarration(with: "主人公はディフェンスモードに入った！")
+    }
+    
+    func putNarration(with text: String) {
+        self.narrationLabel.text = text
+    }
+    
 }

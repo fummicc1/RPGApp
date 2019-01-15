@@ -18,4 +18,5 @@ enum CharacterStatus {
 protocol Character {
     var hp: Int { get }
     var status: CharacterStatus { get }
+    var isDead: Bool { get }
 }

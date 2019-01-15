@@ -94,7 +94,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自分のターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-oK-hpc">
                                         <rect key="frame" x="8" y="39" width="359" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -105,22 +105,32 @@
                                 <rect key="frame" x="18" y="589" width="108" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="攻撃"/>
+                                <connections>
+                                    <action selector="tappedAttackButton" destination="tsT-v4-QN9" eventType="touchUpInside" id="2TC-xk-lC9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVw-7d-KLT">
                                 <rect key="frame" x="133" y="589" width="108" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="守る"/>
+                                <connections>
+                                    <action selector="tappedDefenceButton" destination="tsT-v4-QN9" eventType="touchUpInside" id="Edo-4G-wwe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-Ca-SZP">
                                 <rect key="frame" x="249" y="589" width="108" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="必殺技"/>
+                                <connections>
+                                    <action selector="tappedSpecialAttackButton" destination="tsT-v4-QN9" eventType="touchUpInside" id="H4s-Qh-h1f"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="5TK-6e-s82"/>
                     </view>
                     <connections>
+                        <outlet property="narrationLabel" destination="uMq-oK-hpc" id="cNk-nL-Bfa"/>
                         <outlet property="protagonistHPLabel" destination="a31-qi-IU1" id="sHO-7M-YT4"/>
                         <outlet property="protagonistImageView" destination="cNO-lf-ml1" id="UWp-la-oac"/>
                         <outletCollection property="protagonistCommandButtons" destination="2Ak-KR-t3h" collectionClass="NSMutableArray" id="1Xz-yt-cv7"/>
