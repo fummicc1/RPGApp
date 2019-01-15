@@ -11,6 +11,8 @@ import Foundation
 class Protagonist: Character {
     
     var hp: Int = 10
+    var shield: Int = 0
+    var power: Int = 0
     var status: CharacterStatus = .start
     var isDead: Bool {
         return hp <= 0 ? true : false
@@ -23,30 +25,17 @@ class Protagonist: Character {
         switch kind {
         case .attack:
             status = .attack
-            normalAttack()
+            power = 3
         case .defence:
             status = .defence
-            defence()
+            shield = 3
+            power = 0
         case .specialAttack:
             status = .specialAttack
-            specialAttack()
+            power = 8
         default:
             // TODO: テストしたい
             break
         }
-        
     }
-    
-    private func defence() {
-        
-    }
-    
-    private func normalAttack() {
-        
-    }
-    
-    private func specialAttack() {
-        
-    }
-    
 }

@@ -10,21 +10,13 @@ import UIKit
 
 class LobbyViewController: UIViewController {
     
-    let protagonist: Protagonist = Protagonist()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func tappedToBattleScene() {
-        performSegue(withIdentifier: "toBattle", sender: protagonist)
+        performSegue(withIdentifier: "toBattle", sender: nil)
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let battleVC = segue.destination as! BattleViewController
-        battleVC.protagonist = self.protagonist
-    }
-    
 }
 

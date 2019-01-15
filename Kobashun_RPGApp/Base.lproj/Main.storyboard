@@ -130,6 +130,8 @@
                         <viewLayoutGuide key="safeArea" id="5TK-6e-s82"/>
                     </view>
                     <connections>
+                        <outlet property="enemyHPLabel" destination="W53-1K-D6f" id="HrV-b9-VSu"/>
+                        <outlet property="enemyImageView" destination="GcC-De-vlD" id="Z2k-hd-WU8"/>
                         <outlet property="narrationLabel" destination="uMq-oK-hpc" id="cNk-nL-Bfa"/>
                         <outlet property="protagonistHPLabel" destination="a31-qi-IU1" id="sHO-7M-YT4"/>
                         <outlet property="protagonistImageView" destination="cNO-lf-ml1" id="UWp-la-oac"/>

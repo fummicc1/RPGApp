@@ -18,6 +18,7 @@
 		D3FEB5D721EE07830075F188 /* Protagonist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB5D621EE07830075F188 /* Protagonist.swift */; };
 		D3FEB5D921EE08420075F188 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB5D821EE08420075F188 /* Enemy.swift */; };
 		D3FEB5DC21EE08EF0075F188 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB5DB21EE08EF0075F188 /* Character.swift */; };
+		D3FEB5DE21EE16490075F188 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEB5DD21EE16490075F188 /* PlayerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D3FEB5D621EE07830075F188 /* Protagonist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protagonist.swift; sourceTree = "<group>"; };
 		D3FEB5D821EE08420075F188 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		D3FEB5DB21EE08EF0075F188 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D3FEB5DD21EE16490075F188 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				D3FEB5D821EE08420075F188 /* Enemy.swift */,
 				D3FEB5D621EE07830075F188 /* Protagonist.swift */,
 				D3FEB5DB21EE08EF0075F188 /* Character.swift */,
+				D3FEB5DD21EE16490075F188 /* PlayerController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				D3FEB5D921EE08420075F188 /* Enemy.swift in Sources */,
 				D3570D6021EB220A00E795F3 /* LobbyViewController.swift in Sources */,
 				D3FEB5DC21EE08EF0075F188 /* Character.swift in Sources */,
+				D3FEB5DE21EE16490075F188 /* PlayerController.swift in Sources */,
 				D3FEB5D721EE07830075F188 /* Protagonist.swift in Sources */,
 				D3570D5E21EB220A00E795F3 /* AppDelegate.swift in Sources */,
 			);
