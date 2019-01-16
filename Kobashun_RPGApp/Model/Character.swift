@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum CharacterStatus {
+enum CharacterStatus: Int {
     case start
-    case defence
-    case attack
+    case normalAttack
     case specialAttack
+    case defence
 }
 
 protocol Character {
@@ -20,4 +20,5 @@ protocol Character {
     var status: CharacterStatus { get }
     var isDead: Bool { get }
     var power: Int { get }
+    var isMyTurn: Bool { get }
 }

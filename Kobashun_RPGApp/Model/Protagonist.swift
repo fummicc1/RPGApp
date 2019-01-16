@@ -10,6 +10,7 @@ import Foundation
 
 class Protagonist: Character {
     
+    weak var parent: PlayerController?
     var hp: Int = 10
     var shield: Int = 0
     var power: Int = 0
@@ -17,14 +18,27 @@ class Protagonist: Character {
     var isDead: Bool {
         return hp <= 0 ? true : false
     }
+    var isMyTurn: Bool = true {
+        didSet {
+            if isMyTurn {
+                return
+            } else {
+                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
+                    print("cpuの攻撃")
+                    self.parent?.cpuAttack()
+                }
+            }
+        }
+    }
     
     init() { }
     
     func attack(kind: CharacterStatus) {
         
         switch kind {
-        case .attack:
-            status = .attack
+        case .normalAttack:
+            status = .normalAttack
             power = 3
         case .defence:
             status = .defence

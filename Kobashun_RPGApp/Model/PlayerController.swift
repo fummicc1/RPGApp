@@ -10,6 +10,8 @@ import Foundation
 
 class PlayerController {
     
+    weak var attachedViewController: BattleViewController?
+    
     static let shared = PlayerController()
     
     private init() { }
@@ -23,6 +25,24 @@ class PlayerController {
     
     func damageEnemy() {
         enemy.hp -= protagonist.power
+    }
+    
+    func changeTurn() {
+        protagonist.isMyTurn.toggle()
+        enemy.isMyTurn.toggle()
+    }
+    
+    func presentTurnStateChanged() {
+        attachedViewController?.reflectTurnStateToButtons()
+    }
+    
+    func cpuAttack() {
+        enemy.attack(value: Int.random(in: 1...2))
+    }
+    
+    func reflectStateToLabel(narration: String) {
+        attachedViewController?.reflectDamageToLabel()
+        attachedViewController?.putNarration(with: narration)
     }
     
 }
